@@ -90,8 +90,10 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slide_text">
-                                        <h3><span span class="theme_color">You only have know one thing</span><br>you can learn anything</h3>
-                                        <h4>Free Educations</h4>
+                                        <h3>
+{{--                                            <span span class="theme_color">You only have know one thing</span>--}}
+                                            <br>you can learn anything</h3>
+{{--                                        <h4>Free Educations</h4>--}}
                                         <br>
                                         <div class="full center">
 										    <a class="contact_bt" href="courses">Start a Course</a>
@@ -106,8 +108,11 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slide_text">
-                                        <h3><span span class="theme_color">You only have know one thing</span><br>you can learn anything</h3>
-                                        <h4>Free Educations</h4>
+                                        <h3>
+{{--                                            <span span class="theme_color">You only have know one thing</span>--}}
+                                            <br>
+                                            you can learn anything</h3>
+{{--                                        <h4>Free Educations</h4>--}}
                                         <br>
                                         <div class="full center">
 										    <a class="contact_bt" href="courses">Start a Course</a>
@@ -151,16 +156,16 @@
                 <div class="col-md-6 layout_padding_2">
                     <div class="full">
                         <div class="heading_main text_align_left">
-						   <h2><span>Welcome To</span> Education</h2>
+						   <h2><span>Welcome </span> Home</h2>
                         </div>
 						<div class="full">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+						  </p>
 						</div>
 						<div class="full">
-						   <a class="hvr-radial-out button-theme" href="#">About more</a>
+{{--						   <a class="hvr-radial-out button-theme" href="#">About more</a>--}}
 						</div>
                     </div>
                 </div>
