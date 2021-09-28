@@ -53,14 +53,15 @@
           <div class="col-md-7">
             <h3 style="font-size:2rem">Login</h3>
             {{-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> --}}
-            <form action="#" method="post">
+            <form action="login" method="POST">
+                @csrf
               <div class="form-group first">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username">
+                <label for="username">Email</label>
+                <input type="text" name="email" class="form-control" placeholder="your-email@gmail.com" id="username">
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Your Password" id="password">
+                <input type="password" name="pwd" class="form-control" placeholder="Your Password" id="password">
               </div>
 
               <div class="d-flex mb-5 align-items-center">
@@ -70,8 +71,25 @@
                 </label>
                 <span class="ml-auto"><a href="signup" class="forgot-pass" style="font-size:12.5px"> Dont have an account? Sign Up</a></span>
               </div>
+        {{-------------------Form Errors-----------------------}}
+                @if(Session::get('faillog'))
+                    <div class="alert alert-danger" role="alert" >
+                        {{ Session::get('faillog') }}
+                    </div>
+                @endif
+                @error('email')
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
+                @error('pwd')
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
+        {{---------X---------Form Errors----------X------------}}
 
-              <input type="submit" value="Log In" class="btn btn-block btn-primary"><div style="margin-bottom:8px"></div>
+                <input type="submit" value="Log In" class="btn btn-block btn-primary"><div style="margin-bottom:8px"></div>
               <a href="{{ url('/') }}" > <-- back to site</a>
 
             </form>

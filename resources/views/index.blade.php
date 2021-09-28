@@ -66,7 +66,11 @@
                         <li><a class="nav-link" href="media">Media</a></li>
                         <li><a class="nav-link" href="about">About Us</a></li>
                         <li><a class="nav-link" href="contact">Contact us</a></li>
-                        <li><a class="nav-link" href="login">Login/Signup</a></li>
+                        @if(session('loguser'))
+                            <li><a class="nav-link" href="logout">Logout</a></li>
+                        @else
+                            <li><a class="nav-link" href="login">LogIn/SignUp</a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="search-box">
@@ -85,7 +89,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:url(img/heart-main-office.jpg);">
+                    <div class="pogoSlider-slide" style="background-image:url(/img/heart-main-office.jpg);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -103,15 +107,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pogoSlider-slide" style="background-image:url(img/heart-amber-group.jpg);">
+                    <div class="pogoSlider-slide" style="background-image:url(/img/heart-amber-group.jpg);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slide_text">
                                         <h3>
-{{--                                            <span span class="theme_color">You only have know one thing</span>--}}
+                                            <span span class="theme_color">Join our family</span>
                                             <br>
-                                            you can learn anything</h3>
+{{--                                            Join our family</h3>--}}
 {{--                                        <h4>Free Educations</h4>--}}
                                         <br>
                                         <div class="full center">
@@ -155,9 +159,15 @@
             <div class="row">
                 <div class="col-md-6 layout_padding_2">
                     <div class="full">
+                        @if(session('loguser'))
                         <div class="heading_main text_align_left">
-						   <h2><span>Welcome </span> Home</h2>
+						   <h2><span>Welcome </span> {{ session('loguser') }} </h2>
                         </div>
+                        @else
+                            <div class="heading_main text_align_left">
+                                <h2><span>Welcome </span> Home</h2>
+                            </div>
+                        @endif
 						<div class="full">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -171,7 +181,7 @@
                 </div>
 				<div class="col-md-6">
                     <div class="full">
-                       <img src="img/img2.png" alt="#" />
+                       <img src="img/heart-welcome.png" alt="#" />
                     </div>
                 </div>
             </div>
@@ -293,7 +303,7 @@
                 <div class="col-md-12">
                     <div class="full">
                         <div class="heading_main text_align_center">
-						   <h2><span>Latest Clips</span></h2>
+						   <h2><span>Latest Media</span></h2>
                         </div>
 					  </div>
                 </div>
@@ -308,14 +318,14 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-12">
 									   <div class="full blog_img_popular">
-                                          <img class="img-responsive" src="img/img9.png" alt="#" />
-										  <h4>Technology</h4>
+                                          <img class="img-responsive" src="/storage/img/heart-chefs.jpg" alt="#" />
+										  <h4>Culinary Arts</h4>
 										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 										</div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                         <div class="full blog_img_popular">
-                                          <img class="img-responsive" src="img/img8.png" alt="#" />
+                                          <img class="img-responsive" src="/storage/img/amber-group-1.jpg" alt="#" />
 										  <h4>Education</h4>
 										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 										</div>
@@ -326,15 +336,15 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-12">
 									   <div class="full blog_img_popular">
-                                          <img class="img-responsive" src="img/img9.png" alt="#" />
-										  <h4>Technology</h4>
+                                          <img class="img-responsive" src="/storage/img/food-1.jpg" alt="#" />
+										  <h4>A Treat</h4>
 										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 										</div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                         <div class="full blog_img_popular">
-                                          <img class="img-responsive" src="img/img8.png" alt="#" />
-										  <h4>Education</h4>
+                                          <img class="img-responsive" src="/storage/img/heart-dancing.jpeg" alt="#" />
+										  <h4>Entertainment</h4>
 										  <p>Pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 										</div>
                                     </div>
@@ -378,7 +388,7 @@
                <div class="row">
                  <div class="col-lg-6 col-md-6 col-sm-12">
 				    <div class="full float-right_img">
-                        <img src="img/img10.png" alt="#">
+                        <img src="/img/heart-trainee2.jpg" alt="#">
                     </div>
                  </div>
 				 <div class="layout_padding col-lg-6 col-md-6 col-sm-12">

@@ -253,7 +253,11 @@
                     <li><a href="media">MEDIA</a></li>
                     <li><a href="about">ABOUT US</a></li>
                     <li><a href="contact">CONTACT US</a></li>
-                    <li><a href="contact">LOGIN/SIGNUP</a></li>
+                    @if(session('loguser'))
+                        <li><a href="logout">Logout</a></li>
+                    @else
+                        <li><a href="login">LogIn/SignUp</a></li>
+                    @endif
                 </ul>
             </div>
         </div>

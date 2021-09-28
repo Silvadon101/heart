@@ -100,9 +100,9 @@
 						   </fieldset>
 						</form>
 							        @if( Session::get('message') )
-						        <div style="margin:20px 0" class="alert alert-success" role="alert">
-							            {{ Session::get('message') }}
-						        </div>
+                                        <div style="margin:20px 0" class="alert alert-success" role="alert">
+                                                {{ Session::get('message') }}
+                                        </div>
 							        @endif
 
 					</div>
