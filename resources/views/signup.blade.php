@@ -12,10 +12,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css-3/bootstrap.min.css">
-    
+
     <!-- Style -->
     <link rel="stylesheet" href="css-3/style.css">
-    
+
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="apple-touch-icon" href="#" />
 
@@ -33,7 +33,7 @@
     <title>Heart/NSTA Trust | Signup</title>
   </head>
   <body>
-  
+
         <!-- LOADER -->
         <div id="preloader">
           <div class="loader">
@@ -42,7 +42,7 @@
       </div>
       <!-- end loader -->
       <!-- END LOADER -->
-  
+
 
   <div class="d-lg-flex half">
     <div class="bg order-1 order-md-2" style="background-image: url('img/book-girl.jpg');"></div>
@@ -53,33 +53,65 @@
           <div class="col-md-7">
             <h3 style="font-size:2rem">Signup</h3>
             {{-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> --}}
-            <form action="#" method="post">
+            <form action="signup" method="post">
+                @csrf
               <div class="form-group first">
                 <label for="username">Full Name</label>
-                <input type="text" class="form-control" placeholder="Your Full Name " id="username">
+                <input type="text"  name="name" class="form-control" placeholder="Your Full Name " id="username">
               </div>
               <div class="form-group first">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" placeholder="Your Username" id="username">
+                <input type="text" name="username" class="form-control" placeholder="Your Username" id="username">
               </div>
               <div class="form-group first">
                 <label for="username">Email</label>
-                <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username">
+                <input type="text" name="email" class="form-control" placeholder="your-email@gmail.com" id="username">
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Your Password" id="password">
+                <input type="password" name="password" class="form-control" placeholder="Your Password" id="password">
               </div>
-              
+
               <div class="d-flex mb-5 align-items-center">
                 <label class="control control--checkbox mb-0"><span class="caption" style="font-size:12.5px">Remember me</span>
                   <input type="checkbox" checked="checked"/>
                   <div class="control__indicator"></div>
                 </label>
-                <span class="ml-auto"><a href="login" class="forgot-pass" style="font-size:12.5px">Already have an account? Log In</a></span> 
+                <span class="ml-auto"><a href="login" class="forgot-pass" style="font-size:12.5px">Already have an account? Log In</a></span>
               </div>
-
-              <input type="submit" value="Sign Up" class="btn btn-block btn-primary"><div style="margin-bottom:8px"></div>
+          {{-----------------Form Errors-----------------------}}
+              @if(Session::get('failuser'))
+                  <div class="alert alert-danger" role="alert">
+                      {{ Session::get('failuser') }}
+                  </div>
+              @endif
+              @if(Session::get('failemail'))
+                  <div class="alert alert-danger" role="alert">
+                      {{ Session::get('failemail') }}
+                  </div>
+              @endif
+                @error('name')
+                <div class="alert alert-danger" role="alert" >
+                    {{ $message }}
+                </div>
+                @enderror
+                @error('username')
+                <div class="alert alert-danger" role="alert" >
+                    {{ $message }}
+                </div>
+                @enderror
+                @error('email')
+                <div class="alert alert-danger" role="alert" >
+                    {{ $message }}
+                </div>
+                @enderror
+                @error('password')
+                <div class="alert alert-danger" role="alert" >
+                    {{ $message }}
+                </div>
+                @enderror
+          {{--------X--------Form Errors----------X------------}}
+                <input type="submit" value="Sign Up" class="btn btn-block btn-primary"><div style="margin-bottom:8px"></div>
               <a href="{{ url('/') }}" > <-- back to site</a>
             </form>
           </div>
@@ -87,8 +119,8 @@
       </div>
     </div>
   </div>
-    
-    
+
+
 
     <script src="js-3/jquery-3.3.1.min.js"></script>
     <script src="js-3/popper.min.js"></script>

@@ -50,7 +50,11 @@
                     <li><a class="nav-link" href="media">Media</a></li>
                     <li><a class="nav-link" href="about">About Us</a></li>
                     <li><a class="nav-link" href="contact">Contact us</a></li>
-                    <li><a class="nav-link" href="login">Login/SignUp</a></li>
+                    @if(session('loguser'))
+                    <li><a class="nav-link" href="logout">Logout</a></li>
+                    @else
+                    <li><a class="nav-link" href="login">LogIn/SignUp</a></li>
+                    @endif
                 </ul>
             </div>
             <div class="search-box">

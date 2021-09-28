@@ -15,9 +15,7 @@ use App\Http\Controllers\MailController;
 */
 
 // ?---------------Home Page---------------------
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/','App\Http\Controllers\HomeController@index');
 
 // ?------------------About Page----------------
 Route::get('/about', function () {
@@ -36,10 +34,6 @@ Route::get('/courses', function () {
     return view('courses');
 });
 
-// ?-------------------Media Page-------------------
-Route::get('/media', function () {
-    return view('media');
-});
 
 // ?------------------Apply Page---------------------
 Route::get('/apply', function () {
@@ -50,9 +44,21 @@ Route::get('/apply', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::post('/login','App\Http\Controllers\UsersController@login');
 
 // ?---------------Signup Page----------------------
 Route::get('/signup', function () {
     return view('signup');
 });
+Route::post('/signup','App\Http\Controllers\UsersController@signup');
+
+// ?------------------Logout Action-------------------
+Route::get('logout','App\Http\Controllers\UsersController@logout');
+
+// ?-------------------Media Page-------------------
+Route::get('/media', 'App\Http\Controllers\PhotosController@create');
+
+// ?------------------Upload Page (Media)------------
+Route::view('upload','upload');
+Route::post('upload','App\Http\Controllers\PhotosController@store');
 
