@@ -66,7 +66,7 @@
                         <li><a class="nav-link" href="media">Media</a></li>
                         <li><a class="nav-link" href="about">About Us</a></li>
                         <li><a class="nav-link" href="contact">Contact us</a></li>
-                        @if(session('loguser'))
+                        @if(session('loguser') || session('logadmin'))
                             <li><a class="nav-link" href="logout">Logout</a></li>
                         @else
                             <li><a class="nav-link" href="login">LogIn/SignUp</a></li>
@@ -160,9 +160,13 @@
                 <div class="col-md-6 layout_padding_2">
                     <div class="full">
                         @if(session('loguser'))
-                        <div class="heading_main text_align_left">
-						   <h2><span>Welcome </span> {{ session('loguser') }} </h2>
-                        </div>
+                            <div class="heading_main text_align_left">
+                               <h2><span>Welcome </span> {{ session('loguser') }} </h2>
+                            </div>
+                        @elseif(session('logadmin'))
+                            <div class="heading_main text_align_left">
+                                <h2><span>Welcome Admin </span> {{ session('logadmin') }} </h2>
+                            </div>
                         @else
                             <div class="heading_main text_align_left">
                                 <h2><span>Welcome </span> Home</h2>

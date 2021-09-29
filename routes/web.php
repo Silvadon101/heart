@@ -49,7 +49,7 @@ Route::view('admin-add','adminadd');
 Route::post('admin-add','App\Http\Controllers\AdminController@add');
 
 // ?-----------------Admin Dashbaord------------------
-Route::view('admindash','admindash');
+Route::get('admindash','App\Http\Controllers\AdminController@show');
 
 // ?---------------Login Page----------------------
 Route::get('/login', function () {

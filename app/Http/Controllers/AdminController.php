@@ -7,6 +7,16 @@ use App\Models\Admins;
 
 class AdminController extends Controller
 {
+    public function show()
+    {
+        if(session()->has('logadmin'))
+        {
+            return view('admindash');
+        }else{
+            return redirect('admin-log');
+        }
+    }
+
     public function login(Request $request)
     {
         // ?----------------Validation-------------------
@@ -32,7 +42,7 @@ class AdminController extends Controller
         if(!$userdata){
             return back()->with("faillog","Sorry! This account was not found");
         }else{
-            $request->session()->put("loguser",$userlog->username);
+            $request->session()->put("logadmin",$userlog->username);
             return redirect('admindash');
         }
 

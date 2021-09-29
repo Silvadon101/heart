@@ -50,7 +50,7 @@
                     <li><a class="nav-link" href="media">Media</a></li>
                     <li><a class="nav-link" href="about">About Us</a></li>
                     <li><a class="nav-link" href="contact">Contact us</a></li>
-                    @if(session('loguser'))
+                    @if(session('loguser') || session('logadmin'))
                     <li><a class="nav-link" href="logout">Logout</a></li>
                     @else
                     <li><a class="nav-link" href="login">LogIn/SignUp</a></li>
