@@ -40,6 +40,17 @@ Route::get('/apply', function () {
     return view('apply');
 });
 
+// ?---------------Admin Login Page--------------------
+Route::view('admin-log','adminlogin');
+Route::post('admin-log','App\Http\Controllers\AdminController@login');
+
+// todo:--------------------Admin Add (temp)---------------------
+Route::view('admin-add','adminadd');
+Route::post('admin-add','App\Http\Controllers\AdminController@add');
+
+// ?-----------------Admin Dashbaord------------------
+Route::view('admindash','admindash');
+
 // ?---------------Login Page----------------------
 Route::get('/login', function () {
     return view('login');
