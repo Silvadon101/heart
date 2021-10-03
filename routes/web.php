@@ -34,22 +34,10 @@ Route::get('/courses', function () {
     return view('courses');
 });
 
-
 // ?------------------Apply Page---------------------
 Route::get('/apply', function () {
     return view('apply');
 });
-
-// ?---------------Admin Login Page--------------------
-Route::view('admin-log','adminlogin');
-Route::post('admin-log','App\Http\Controllers\AdminController@login');
-
-// todo:--------------------Admin Add (temp)---------------------
-Route::view('admin-add','adminadd');
-Route::post('admin-add','App\Http\Controllers\AdminController@add');
-
-// ?-----------------Admin Dashbaord------------------
-Route::get('admindash','App\Http\Controllers\AdminController@show');
 
 // ?---------------Login Page----------------------
 Route::get('/login', function () {
@@ -72,4 +60,34 @@ Route::get('/media', 'App\Http\Controllers\PhotosController@create');
 // ?------------------Upload Page (Media)------------
 Route::view('upload','upload');
 Route::post('upload','App\Http\Controllers\PhotosController@store');
+
+
+/**
+ * ---------------------------------------------------------------------------
+ *   Admin Pages
+ * ---------------------------------------------------------------------------
+ *
+ * The pages below are related to administrative personnel
+ *
+ */
+
+// ?---------------Admin Login Page--------------------
+Route::view('admin-log','adminlogin');
+Route::post('admin-log','App\Http\Controllers\AdminController@login');
+
+// todo:--------------------Admin Add (temp)---------------------
+Route::view('admin-add','adminadd');
+Route::post('admin-add','App\Http\Controllers\AdminController@add');
+
+// ?-----------------Admin Dashbaord------------------
+Route::get('admindash','App\Http\Controllers\AdminController@show');
+
+// ?-----------------Admin Courses Page-------------
+Route::view('admindash-courses','admincourses');
+
+// ?-----------------Admin Courses Add Page--------------
+Route::view('admindash-courses-add','admincourses_add');
+
+// ?-----------------Admin Courses Info Page---------------
+Route::view('admindash-courses-info','admincourses_info');
 

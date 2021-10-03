@@ -30,11 +30,35 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
 
+    {{-- Courses section css external 
+    =========================== --}}
+        <!-- Site Icons -->
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css-6/bootstrap.min.css">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="css-6/style.css">
+        <!-- ALL VERSION CSS -->
+        <link rel="stylesheet" href="css-6/versions.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="css-6/responsive.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css-6/custom.css">
+    
+        <!-- Modernizer for Portfolio -->
+        <script src="js-6/modernizer.js"></script>
+    
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.img/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+        .course-container{
+            padding: 45px 0;
+        }
+    </style>
 </head>
 
 <body id="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -67,7 +91,7 @@
 <!-- end section -->
 
 <!-- section -->
-<div class="section layout_padding">
+{{-- <div class="section layout_padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -133,8 +157,207 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- end section -->
+
+{{-- ----courses row ----- --}}
+<div class="course-container">
+            <div class="row"> 
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="course-item">
+                              <div class="image-blog">
+                                   <img src="img/blog_1.jpg" alt="" class="img-fluid">
+                              </div>
+                              <div class="course-br">
+                                   <div class="course-title">
+                                        <h2><a href="#" title="">Engineering</a></h2>
+                                   </div>
+                                   <div class="course-desc">
+                                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                                   </div>
+                                   <div class="course-rating">
+                                        4.5
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star-half"></i>                                       
+                                   </div>
+                              </div>
+                              <div class="course-meta-bot">
+                                   <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+                                        <li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+                                   </ul>
+                              </div>
+                         </div>
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="course-item">
+                              <div class="image-blog">
+                                   <img src="img/blog_2.jpg" alt="" class="img-fluid">
+                              </div>
+                              <div class="course-br">
+                                   <div class="course-title">
+                                        <h2><a href="#" title="">Hotel Management</a></h2>
+                                   </div>
+                                   <div class="blog-desc">
+                                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                                   </div>
+                                   <div class="course-rating">
+                                        4.5
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star-half"></i>                                       
+                                   </div>
+                              </div>
+                              <div class="course-meta-bot">
+                                   <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+                                        <li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+                                   </ul>
+                              </div>
+                         </div>
+                </div><!-- end col -->  
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                    <div class="course-item">
+                              <div class="image-blog">
+                                   <img src="img/blog_3.jpg" alt="" class="img-fluid">
+                              </div>
+                              <div class="course-br">
+                                   <div class="course-title">
+                                        <h2><a href="#" title="">Biotechnology</a></h2>
+                                   </div>
+                                   <div class="course-desc">
+                                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                                   </div>
+                                   <div class="course-rating">
+                                        4.5
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star-half"></i>                                       
+                                   </div>
+                              </div>
+                              <div class="course-meta-bot">
+                                   <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+                                        <li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+                                   </ul>
+                              </div>
+                         </div>
+                </div><!-- end col -->
+            </div><!-- end row -->           
+               
+               <hr class="hr3"> 
+               
+            <div class="row"> 
+                    <div class="col-lg-4 col-md-6 col-12">
+                   <div class="course-item">
+                              <div class="image-blog">
+                                   <img src="img/blog_4.jpg" alt="" class="img-fluid">
+                              </div>
+                              <div class="course-br">
+                                   <div class="course-title">
+                                        <h2><a href="#" title="">Medical Sciences</a></h2>
+                                   </div>
+                                   <div class="course-desc">
+                                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                                   </div>
+                                   <div class="course-rating">
+                                        4.5
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star-half"></i>                                       
+                                   </div>
+                              </div>
+                              <div class="course-meta-bot">
+                                   <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+                                        <li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+                                   </ul>
+                              </div>
+                         </div>
+                </div><!-- end col -->
+                    
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="course-item">
+                              <div class="image-blog">
+                                   <img src="img/blog_5.jpg" alt="" class="img-fluid">
+                              </div>         
+                              <div class="course-br">
+                                   <div class="course-title">
+                                        <h2><a href="#" title="">Finance</a></h2>
+                                   </div>
+                                   <div class="course-desc">
+                                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                                   </div>
+                                   <div class="course-rating">
+                                        4.5
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star-half"></i>                                       
+                                   </div>
+                              </div>
+                              <div class="course-meta-bot">
+                                   <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+                                        <li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+                                   </ul>
+                              </div>
+                         </div>
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="course-item">
+                              <div class="image-blog">
+                                   <img src="img/blog_6.jpg" alt="" class="img-fluid">
+                              </div>
+                              <div class="course-br">
+                                   <div class="course-title">
+                                        <h2><a href="#" title="">Fashion Designing</a></h2>
+                                   </div>
+                                   <div class="course-desc">
+                                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                                   </div>    
+                                   <div class="course-rating">
+                                        4.5
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star"></i>    
+                                        <i class="fa fa-star-half"></i>                                       
+                                   </div>
+                              </div>
+                              <div class="course-meta-bot">
+                                   <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+                                        <li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+                                   </ul>
+                              </div>
+                         </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+
+
+{{-- --X--courses row --X--- --}}
+
 <!-- Start Footer -->
 @include('footer')
 

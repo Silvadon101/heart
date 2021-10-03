@@ -69,7 +69,7 @@
     <div class="error-page-int">
         {{-- -----------heart logo-------------}}
         <div class="text-center m-b-md custom-login">
-           <a href="/"><img src="/img/heart-logo.png" class="rounded" alt="logo"></a>
+           <a href="/"><img src="/img/heart-logo.png" class="rounded" alt="logo"></a>&nbsp;
         </div>
         {{-- -----X-----heart logo----X--------}}
         <div class="content-error">
@@ -173,7 +173,7 @@
 <script src="/js-5/main.js"></script>
 <!-- tawk chat JS
     ============================================ -->
-<script src="/js-5/tawk-chat.js"></script>
+{{--<script src="/js-5/tawk-chat.js"></script>--}}
 </body>
 
 </html>
