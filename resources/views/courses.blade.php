@@ -160,6 +160,13 @@
 </div> --}}
 <!-- end section -->
 
+ {{-- =============================================== 
+    TODO: Add "Apply" btn to courses blocks. 
+          Change "books" tag to "price" tag on courses blocks.
+          remove "5-star" rating from courses blocks.
+          Add "Professor" if possible to courses blocks.
+ =============================================== --}}
+
 {{-- ----courses row ----- --}}
 <div class="course-container">
             <div class="row"> 
