@@ -177,7 +177,7 @@
                               </div>
                               <div class="course-br">
                                    <div class="course-title">
-                                        <h2><a href="#" title="">Engineering</a></h2>
+                                        <h2><a href="#" title="">Early Childhood Development</a></h2>
                                    </div>
                                    <div class="course-desc">
                                         <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
@@ -208,7 +208,7 @@
                               </div>
                               <div class="course-br">
                                    <div class="course-title">
-                                        <h2><a href="#" title="">Hotel Management</a></h2>
+                                        <h2><a href="#" title="">Web Development</a></h2>
                                    </div>
                                    <div class="blog-desc">
                                         <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
@@ -239,7 +239,7 @@
                               </div>
                               <div class="course-br">
                                    <div class="course-title">
-                                        <h2><a href="#" title="">Biotechnology</a></h2>
+                                        <h2><a href="#" title="">Administrative Assistant</a></h2>
                                    </div>
                                    <div class="course-desc">
                                         <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>

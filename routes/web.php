@@ -14,6 +14,14 @@ use App\Http\Controllers\MailController;
 |
 */
 
+// ?-------------Clear Cache--------------
+Route::get('/clear-cache',function(){
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    return 'Nice!';
+});
+
+
 // ?---------------Home Page---------------------
 Route::get('/','App\Http\Controllers\HomeController@index');
 
