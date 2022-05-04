@@ -18,7 +18,7 @@ use App\Http\Controllers\MailController;
 Route::get('/clear-cache',function(){
     $exitCode = Artisan::call('cache:clear');
     $exitCode = Artisan::call('config:cache');
-    return 'Nice!';
+    return 'Everything cleared boss!';
 });
 
 

@@ -249,7 +249,7 @@
                 <ul>
                     <li><a href="/">HOME</a></li>
                     <li><a href="courses">COURSES</a></li>
-                    <li><a href="apply">APPLY</a></li>
+                    {{-- <li><a href="apply">APPLY</a></li> --}}
                     <li><a href="media">MEDIA</a></li>
                     <li><a href="about">ABOUT US</a></li>
                     <li><a href="contact">CONTACT US</a></li>

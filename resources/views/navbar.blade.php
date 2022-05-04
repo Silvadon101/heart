@@ -46,7 +46,7 @@
                 <ul class="navbar-nav">
                     <li><a class="nav-link active" href="{{ url('/') }}">Home</a></li>
                     <li><a class="nav-link" href="courses">Courses</a></li>
-                    <li><a class="nav-link" href="apply">Apply</a></li>
+                    {{-- <li><a class="nav-link" href="apply">Apply</a></li> --}}
                     <li><a class="nav-link" href="media">Media</a></li>
                     <li><a class="nav-link" href="about">About Us</a></li>
                     <li><a class="nav-link" href="contact">Contact us</a></li>
