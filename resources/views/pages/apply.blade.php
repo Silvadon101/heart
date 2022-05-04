@@ -49,7 +49,8 @@
 <!-- END LOADER -->
 
 <!-- Start header -->
-@include('navbar')
+@include('layouts.navbar')
+
 <!-- End header -->
 
 <!-- section -->
@@ -136,7 +137,7 @@
 </div>
 <!-- end section -->
 <!-- Start Footer -->
-@include('footer')
+@extends('layouts.footer')
 
 <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 

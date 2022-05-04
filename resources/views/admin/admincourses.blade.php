@@ -69,7 +69,7 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
     <!-- Start Left menu area -->
-        @include('adminsidemenu')
+        @include('layouts.admin.adminsidemenu')
     <!-- End Left menu area -->
 
 <!-- Start Welcome area -->
@@ -86,11 +86,11 @@
     </div>
     <div class="header-advance-area">
         {{-- --------------admin navabr--------------------}}
-        @include('adminnavbar')
+        @include('layouts.admin.adminnavbar')
         {{-- ------X--------admin navabr----------X----------}}
 
         <!-- Mobile Menu start -->
-            @include('adminmobilemenu')
+            @include('layouts.admin.adminmobilemenu')
         <!-- Mobile Menu end -->
         <div class="breadcome-area">
             <div class="container-fluid">
@@ -300,7 +300,7 @@
         </div>
     </div>
     {{--    ----------------footer---------------------}}
-    @include('adminfooter')
+    @include('layouts.admin.adminfooter')
     {{--    -------X---------footer--------X-------------}}
 </div>
 

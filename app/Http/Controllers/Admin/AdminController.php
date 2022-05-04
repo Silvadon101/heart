@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Models\Admins;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
@@ -11,7 +12,7 @@ class AdminController extends Controller
     {
         if(session()->has('logadmin'))
         {
-            return view('admindash');
+            return view('admin.admindash');
         }else{
             return redirect('admin-log');
         }

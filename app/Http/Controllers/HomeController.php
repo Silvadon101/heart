@@ -11,9 +11,9 @@ class HomeController extends Controller
         // *------------Checking if user is logged in before accessing site------------
         if(session()->has('loguser') || session()->has('logadmin'))
         {
-            return view('index');
+            return view('pages.index');
         }else{
-            return view('index');
+            return view('pages.index');
         }
     }
 }

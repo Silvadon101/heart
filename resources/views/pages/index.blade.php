@@ -428,7 +428,7 @@
            </div>
         </div>
 	<!-- end section -->
-@include('footer')
+@extends('layouts.footer')
 
     <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 

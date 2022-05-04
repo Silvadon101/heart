@@ -70,7 +70,7 @@
 <![endif]-->
 
 {{--------------Side Menu----------------}}
-@include('adminsidemenu')
+@include('layouts.admin.adminsidemenu')
 {{-------X-------Side Menu-------X---------}}
 
 <!-- Start Welcome area -->
@@ -88,11 +88,11 @@
     <div class="header-advance-area">
 
         {{-- --------------admin navabr--------------------}}
-            @include('adminnavbar')
+            @include('layouts.admin.adminnavbar')
         {{-- ------X--------admin navabr----------X----------}}
 
         <!-- Mobile Menu start -->
-            @include('adminmobilemenu')
+            @include('layouts.admin.adminmobilemenu')
         <!-- Mobile Menu end -->
         <div class="breadcome-area">
             <div class="container-fluid">
@@ -231,7 +231,7 @@
         </div>
     </div>
     {{--    ----------------footer---------------------}}
-        @include('adminfooter')
+        @include('layouts.admin.adminfooter')
     {{--    -------X---------footer--------X-------------}}
 </div>
 
