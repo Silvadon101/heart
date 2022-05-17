@@ -139,11 +139,11 @@
                 <input type="submit" value="Log In" class="btn btn-block btn-primary"><div style="margin-bottom:8px"></div>
                     {{-- ------Google Btn------- --}}
                     <div class="google-btn">
-                        <a class="google-icon-wrapper" href="#">
+                        <a class="google-icon-wrapper" href="{{ route('googleRedirect') }}">
                             <img class="google-icon"
                                 src="/img/g-logo.png" />
                         </a>
-                        <a href="#">
+                        <a href=" {{ route('googleRedirect') }} ">
                         	<center>
                             <p class="btn-text">Sign In with google</p>
                         	</center>
