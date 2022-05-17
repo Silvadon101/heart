@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Auth\SocialAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +101,15 @@ Route::post('admindash-courses-add',[App\Http\Controllers\CoursesController::cla
 
 // ?-----------------Admin Courses Info Page---------------
 Route::view('admindash-courses-info','admin.admincourses_info')->name('admindash.info.c');
+
+/**
+ * ------------------------------
+ * Google Button 
+ * ------------------------------
+ * 
+ *  All routes here relates to 
+ * google signup and login
+ */
+
+Route::get('/auth/google/redirect',[SocialAuthController::class,'googleRedirect'])->name('googleRedirect');
+Route::get('/auth/google/callback',[SocialAuthController::class,'googleCallback'])->name('googleCallback');
