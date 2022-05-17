@@ -73,12 +73,15 @@ class UsersController extends Controller
         );
 
         // ?----------------Searching For User-------------------
-        $userdata = Users::where("email","=",$request->email)->where("password","=",$request->pwd)->first();
-        $userlog = Users::select("username")->where("email","=",$request->email)->where("password",$request->pwd)->first();
-        // ?----------------Logging In User---------------------
-        if(!$userdata){
+        $userdata = Users::where("email","=",$request->email)->first();
+
+        // ?---------------Checking User Data and Password-------------
+        if(!$userdata || !Hash::check($request->pwd,$userdata->password)){
             return back()->with("faillog","Sorry! This account was not found");
-        }else{
+        }
+        else{
+        // ?----------------Logging In User---------------------
+            $userlog = Users::select("username")->where("email","=",$request->email)->first();
             $request->session()->put("loguser",$userlog->username);
             return redirect('/');
         }
