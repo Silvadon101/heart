@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Users;
+use Illuminate\Support\Facades\Hash;
 
 
 class UsersController extends Controller
@@ -37,7 +38,7 @@ class UsersController extends Controller
                 $data->name = $request->input('name');
                 $data->username = $request->input('username');
                 $data->email = $request->input('email');
-                $data->password = $request->input('password');
+                $data->password = Hash::make($request->input('password'));
                 $data->save();
 
                 // ?--------------Creating User Session ---------------------
