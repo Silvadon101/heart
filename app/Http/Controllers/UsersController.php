@@ -91,9 +91,10 @@ class UsersController extends Controller
     public function logout()
     {
         //*-------------Logging Out User--------------
-        if(session()->has('loguser') || session()->has('logadmin')){
+        if(session()->has('loguser') || session()->has('logadmin') || session()->has('googleuser')){
             session()->pull('loguser');
             session()->pull('logadmin');
+            session()->pull('googleuser');
         }
         return redirect('/');
     }

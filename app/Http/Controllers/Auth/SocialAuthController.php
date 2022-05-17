@@ -42,7 +42,7 @@ class SocialAuthController extends Controller
 
         session()->put("googleuser", $data->name);
 
-       Auth::login($user);
+       // Auth::login($user);
 
     }
 }
