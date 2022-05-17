@@ -91,10 +91,11 @@ Route::post('admin-add',[App\Http\Controllers\Admin\AdminController::class,'add'
 Route::get('admindash',[App\Http\Controllers\Admin\AdminController::class,'show']);
 
 // ?-----------------Admin Courses Page-------------
-Route::view('admindash-courses','admin.admincourses')->name('admindash.courses');
+Route::resource('admindash-courses','App\Http\Controllers\CoursesController');
 
 // ?-----------------Admin Courses Add Page--------------
 Route::view('admindash-courses-add','admin.admincourses_add')->name('admindash.add.c');
+Route::post('admindash-courses-add',[App\Http\Controllers\CoursesController::class,'store']);
 
 // ?-----------------Admin Courses Info Page---------------
 Route::view('admindash-courses-info','admin.admincourses_info')->name('admindash.info.c');
