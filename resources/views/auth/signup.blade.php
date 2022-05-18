@@ -31,6 +31,54 @@
     <link rel="stylesheet" href="css/custom.css" />
 
     <title>Heart/NSTA Trust | Signup</title>
+
+    <style>
+                    /* ------Google Btn------ */
+
+        .google-btn {
+            /*width: 98%;*/
+            height: 42px;
+            background-color: #007BFF;
+            border-radius: 3px;
+            /*box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .25);*/
+        }
+
+        .google-icon-wrapper {
+            position: absolute;
+            margin-top: 1px;
+            margin-left: 1px;
+            width: 40px;
+            height: 40px;
+            border-radius: 3px 2px 2px 3px;
+            background-color: #fff;
+        }
+
+        .google-icon {
+            position: absolute;
+            margin-top: 11px;
+            margin-left: 11px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-text {
+            /*float: right;*/
+            /*margin: 5px;*/
+            padding: 6px 0 0 0;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            /*font-family: "Roboto";*/
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .google-btn:hover {
+            /*box-shadow: 0 0 6px;*/
+            background: #1669F2;
+        }
+
+    </style>
   </head>
   <body>
 
@@ -112,6 +160,19 @@
                 @enderror
           {{--------X--------Form Errors----------X------------}}
                 <input type="submit" value="Sign Up" class="btn btn-block btn-primary"><div style="margin-bottom:8px"></div>
+
+                  {{-- ------Google Btn------- --}}
+                    <div class="google-btn">
+                        <a class="google-icon-wrapper" href="{{ route('googleRedirect') }}">
+                            <img class="google-icon"
+                                src="/img/g-logo.png" />
+                        </a>
+                        <a href=" {{ route('googleRedirect') }} ">
+                          <center>
+                            <p class="btn-text">Sign Up with google</p>
+                          </center>
+                        </a>
+                    </div>
               <a href="{{ url('/') }}" > <-- back to site</a>
             </form>
           </div>
