@@ -10,7 +10,7 @@ class PhotosController extends Controller
     public function create()
     {
         $images = Photos::all();
-        return view('media',['images'=>$images]);
+        return view('pages.media',['images'=>$images]);
     }
 
     public function store(Request $request)

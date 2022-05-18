@@ -29,6 +29,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Heart Trust NTA User Contact Form')->view('sendmail');
+        return $this->subject('Heart Trust NTA User Contact Form')->view('mail.sendmail');
     }
 }

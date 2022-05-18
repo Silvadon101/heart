@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Admins;
 use App\Models\Users;
+use Illuminate\Support\Facades\Hash;
 
 
 class UsersController extends Controller
@@ -38,7 +38,7 @@ class UsersController extends Controller
                 $data->name = $request->input('name');
                 $data->username = $request->input('username');
                 $data->email = $request->input('email');
-                $data->password = $request->input('password');
+                $data->password = Hash::make($request->input('password'));
                 $data->save();
 
                 // ?--------------Creating User Session ---------------------
@@ -73,12 +73,15 @@ class UsersController extends Controller
         );
 
         // ?----------------Searching For User-------------------
-        $userdata = Users::where("email","=",$request->email)->where("password","=",$request->pwd)->first();
-        $userlog = Users::select("username")->where("email","=",$request->email)->where("password",$request->pwd)->first();
-        // ?----------------Logging In User---------------------
-        if(!$userdata){
+        $userdata = Users::where("email","=",$request->email)->first();
+
+        // ?---------------Checking User Data and Password-------------
+        if(!$userdata || !Hash::check($request->pwd,$userdata->password)){
             return back()->with("faillog","Sorry! This account was not found");
-        }else{
+        }
+        else{
+        // ?----------------Logging In User---------------------
+            $userlog = Users::select("username")->where("email","=",$request->email)->first();
             $request->session()->put("loguser",$userlog->username);
             return redirect('/');
         }
@@ -88,8 +91,10 @@ class UsersController extends Controller
     public function logout()
     {
         //*-------------Logging Out User--------------
-        if(session()->has('loguser')){
+        if(session()->has('loguser') || session()->has('logadmin') || session()->has('googleuser')){
             session()->pull('loguser');
+            session()->pull('logadmin');
+            session()->pull('googleuser');
         }
         return redirect('/');
     }

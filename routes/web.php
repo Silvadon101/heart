@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Auth\SocialAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,51 +16,100 @@ use App\Http\Controllers\MailController;
 |
 */
 
+// ?-------------Clear Cache--------------
+// Route::get('/clear-cache',function(){
+//     $exitCode = Artisan::call('cache:clear');
+//     $exitCode = Artisan::call('config:cache');
+//     return 'Everything cleared boss!';
+// });
+
+
 // ?---------------Home Page---------------------
-Route::get('/','App\Http\Controllers\HomeController@index');
+Route::get('/',[App\Http\Controllers\HomeController::class,'index']);
 
 // ?------------------About Page----------------
 Route::get('/about', function () {
-    return view('about');
+    return view('pages.about');
 });
 
 // ?---------------------Contact Page-----------------
 Route::get('/contact', function () {
-    return view('contact');
+    return view('pages.contact');
 });
 
 Route::post('/contact',[MailController::class,'mailsend']);
 
 // ?-------------------Courses Page-------------------
 Route::get('/courses', function () {
-    return view('courses');
+    return view('pages.courses');
 });
-
 
 // ?------------------Apply Page---------------------
 Route::get('/apply', function () {
-    return view('apply');
+    return view('pages.apply');
 });
 
 // ?---------------Login Page----------------------
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.user_login');
 });
-Route::post('/login','App\Http\Controllers\UsersController@login');
+Route::post('/login',[App\Http\Controllers\UsersController::class,'login']);
 
 // ?---------------Signup Page----------------------
 Route::get('/signup', function () {
-    return view('signup');
+    return view('auth.signup');
 });
-Route::post('/signup','App\Http\Controllers\UsersController@signup');
+Route::post('/signup',[App\Http\Controllers\UsersController::class,'signup']);
 
 // ?------------------Logout Action-------------------
-Route::get('logout','App\Http\Controllers\UsersController@logout');
+Route::get('logout',[App\Http\Controllers\UsersController::class,'logout']);
 
 // ?-------------------Media Page-------------------
-Route::get('/media', 'App\Http\Controllers\PhotosController@create');
+Route::get('/media', [App\Http\Controllers\PhotosController::class,'create']);
 
 // ?------------------Upload Page (Media)------------
-Route::view('upload','upload');
-Route::post('upload','App\Http\Controllers\PhotosController@store');
+Route::view('upload','test.upload');
+Route::post('upload',[App\Http\Controllers\PhotosController::class,'store']);
 
+
+/**
+ * ---------------------------------------------------------------------------
+ *   Admin Pages
+ * ---------------------------------------------------------------------------
+ *
+ * The pages below are related to administrative personnel
+ *
+ */
+
+// ?---------------Admin Login Page--------------------
+Route::view('admin-log','admin.adminlogin')->name('admin.login');
+Route::post('admin-log',[App\Http\Controllers\Admin\AdminController::class,'login']);
+
+// todo:--------------------Admin Add (temp)---------------------
+Route::view('admin-add','admin.adminadd')->name('admin.add');
+Route::post('admin-add',[App\Http\Controllers\Admin\AdminController::class,'add']);
+
+// ?-----------------Admin Dashbaord------------------
+Route::get('admindash',[App\Http\Controllers\Admin\AdminController::class,'show']);
+
+// ?-----------------Admin Courses Page-------------
+Route::resource('admindash-courses','App\Http\Controllers\CoursesController');
+
+// ?-----------------Admin Courses Add Page--------------
+Route::view('admindash-courses-add','admin.admincourses_add')->name('admindash.add.c');
+Route::post('admindash-courses-add',[App\Http\Controllers\CoursesController::class,'store']);
+
+// ?-----------------Admin Courses Info Page---------------
+Route::view('admindash-courses-info','admin.admincourses_info')->name('admindash.info.c');
+
+/**
+ * ------------------------------
+ * Google Button 
+ * ------------------------------
+ * 
+ *  All routes here relates to 
+ * google signup and login
+ */
+
+Route::get('/auth/google/redirect',[SocialAuthController::class,'googleRedirect'])->name('googleRedirect');
+Route::get('/auth/google/callback',[SocialAuthController::class,'googleCallback'])->name('googleCallback');
